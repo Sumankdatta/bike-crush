@@ -1,0 +1,57 @@
+[
+    {
+        "_id":"1",
+        "title":"Kawasaki" ,
+        
+        "img" : "https://i.postimg.cc/nV2NhDcs/bb1.jpg",
+        "cost" : "3000 tk ",
+        "duration" : " 2 days"
+
+    },
+    {
+        "_id":"2",
+        "title":" Yamaha R15 V2" ,
+    
+        
+        "img" : "https://i.postimg.cc/SRPrzqvP/bb2.jpg",
+        "cost" : "3500 tk ",
+        "duration" : " 3 days"
+
+    },
+    {
+        "_id":"3",
+        "title": "Suzuki",
+    
+        "img" : "https://i.postimg.cc/FRBcTpVd/bb3.jpg",
+        "cost" : "4000 tk ",
+        "duration" : " 4 days"
+
+    },
+    {
+        "_id":"4",
+        "title": " Bmw motorrad ",
+        
+        "img" : "https://i.postimg.cc/GpMq1kjr/bb4.jpg",
+        "cost" : "2000 tk ",
+        "duration" : " 2 days"
+
+    },
+    {
+        "_id":"5",
+        "title": "Yamaha YZF-R1",
+    
+        "img" : "https://i.postimg.cc/bvv9LZf5/bb5.jpg",
+        "cost" : "3000 tk ",
+        "duration" : " 3 days"
+
+    },
+    {
+        "_id":"6",
+        "title": " Yamaha YZF-R1",
+        
+        "img" : "https://i.postimg.cc/gJZRBRSg/bb6.jpg",
+        "cost" : "3000 tk ",
+        "duration" : " 3 days"
+
+    }
+]
