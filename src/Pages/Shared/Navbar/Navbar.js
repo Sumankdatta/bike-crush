@@ -1,13 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import icon from '../../../assets/image/bikeico.png'
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handalLogout = () => {
+    logOut()
+        .then(() => { })
+        .catch(error => {
+            console.error('error', error)
+        })
+}
 
 const menuItems=
 <>
-<li><Link>Home</Link></li>
-<li><Link>Blog</Link></li>
+<li><Link to='/'>Home</Link></li>
+<li><Link to='/blog'>Blog</Link></li>
+
+
+
+{
+            user?.uid ?
+
+                <>
+                    <li><Link><span>{user?.displayName}</span></Link></li>
+
+                    <li><button onClick={handalLogout}>Sign Out</button></li>
+                    
+                </>
+                :
+                <>
+
+                    <li><Link to='/login'>Login</Link></li>
+                    <li><Link to='/signup'>Sign Up</Link></li>
+
+                </>
+        }
+
 </>
 
     return (
@@ -21,7 +52,7 @@ const menuItems=
               {menuItems}
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl"><img className='w-10 mr-2' src={icon} alt="" /> Bike Crush</Link>
+          <Link to='/' className="btn btn-ghost normal-case text-xl"><img className='w-10 mr-2' src={icon} alt="" /> BikeCrush</Link>
         </div>
         <div className="navbar-end hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
