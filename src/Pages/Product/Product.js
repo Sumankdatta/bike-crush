@@ -1,18 +1,22 @@
 import React from 'react';
 
-const Product = ({ item }) => {
-    const {brand}=item;
+const Product = ({ item,setProductName }) => {
+    const {brand,buying_price,img,sell_price,title,used_time}=item;
     console.log(item)
     return (
        <div>
         
         <div className="card card-compact w-80 bg-base-100 shadow-xl">
-            <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+            <figure><img className='w-48' src={img} alt="Shoes" /></figure>
             <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
+                <h2 className="card-title">{title}</h2>
+                <p>Used Time : {used_time}</p>
+                <p>Buying Price : {buying_price}</p>
+                <p>Selling Price : {sell_price}</p>
+                
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    
+                    <label onClick={()=>setProductName(item)} htmlFor="booking-modal" className="btn btn-primary">Booking Now</label>
                 </div>
             </div>
         </div>
