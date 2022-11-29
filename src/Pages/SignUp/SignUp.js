@@ -1,7 +1,8 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import login from '../../assets/image/sign.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
@@ -9,6 +10,8 @@ const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { createUser,setUser,updateUser,providerLogIn,loading } = useContext(AuthContext)
     const [signupError,setSignupError]=useState('')
+    const googleProvider= new GoogleAuthProvider();
+    const Navigate=useNavigate() 
 
 
     const handleSignup = data => {
@@ -36,6 +39,21 @@ const SignUp = () => {
                     console.error(error)
                     setSignupError(error.message)
                 })       
+        }
+
+        const handleGoogleSignIn = () => {
+            providerLogIn(googleProvider)
+    
+                .then(result => {
+                    const user = result.user;
+                    console.log(user)
+                    Navigate('/')
+                  
+                })
+                .catch(error => {
+                    console.error('error', error)
+                })
+    
         }
 
 
@@ -84,7 +102,7 @@ const SignUp = () => {
                 </form>
                 <p className='text-center mt-2'>Already have an account ? <Link to='/login' className='text-primary'>Please Login</Link></p>
                 <div className="divider">OR</div>
-                <button  className='btn btn-outline w-full mt-5'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline w-full mt-5'>CONTINUE WITH GOOGLE</button>
             </div>
               </div>
           </div >
