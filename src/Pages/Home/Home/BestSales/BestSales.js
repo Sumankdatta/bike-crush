@@ -10,7 +10,7 @@ const BestSales = () => {
             .then(data => setPopular(data))
     }, [])
     return (
-        <div className='my-20'>
+        <div className='mt-48 '>
             <div className='text-center'>
                 <p className='text-2xl font-bold text-orange-600'>Best Sales</p>
                 <h2 className='text-4xl font-semibold'>Choose Your Best Bike</h2>

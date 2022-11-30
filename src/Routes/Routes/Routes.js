@@ -49,7 +49,7 @@ const router=createBrowserRouter([
                 element:<MyOrder></MyOrder>
             },
             {
-                path:'/dashboard/allusers',
+                path:'/dashboard/allsellers',
                 element:<Allusers></Allusers>
             },
             

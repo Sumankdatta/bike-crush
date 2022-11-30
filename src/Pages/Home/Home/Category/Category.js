@@ -17,10 +17,10 @@ const Category = () => {
 
     return (
         <div>
-            <div className='text-4xl text-bold text-center mt-10 mb-24'>
-                <h1>Select Your Best Bike By Category</h1>
+            <div className='text-4xl text-bold text-center mt-20 '>
+                <h1>Select Your Best Second-Hand <br /> Bike By Category</h1>
             </div>
-            <div className='grid grid-cols-3 cols-auto justify-items-center text-4xl text-bold'>
+            <div className='grid grid-cols-3 cols-auto justify-items-center text-4xl mt-32 text-bold'>
             {
                     categories.map(category=> <p key={category._id}>
                         
