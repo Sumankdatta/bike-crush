@@ -4,11 +4,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../../assets/image/sign.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [loginError,setLoginError]=useState('')
     const {signIn,paswordVer,user,loading}=useContext(AuthContext);
+    const [loginUserEmail,setLoginUserEmail]=useState('')
+    const [token]=useToken(loginUserEmail)
     const location=useLocation();
     const Navigate=useNavigate()
     useTitle('login')
@@ -16,7 +19,11 @@ const Login = () => {
     if(loading){
         return <progress className="progress w-56"></progress>
     }
+    
     let from = location.state?.from?.pathname || "/";
+    if(token){
+     Navigate(from,{replace:true})
+    }
 
     const handleLogin=data=>{
         setLoginError('')
@@ -25,7 +32,8 @@ const Login = () => {
         .then(result=>{
             const user=result.user;
             console.log(user)
-            Navigate(from,{replace:true})
+            setLoginUserEmail(data.email)
+           
              })
     .catch(error=>{
         console.error(error)

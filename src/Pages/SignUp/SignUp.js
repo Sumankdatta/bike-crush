@@ -6,15 +6,22 @@ import { Link, useNavigate } from 'react-router-dom';
 import login from '../../assets/image/sign.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { createUser,setUser,updateUser,providerLogIn,loading } = useContext(AuthContext)
     const [signupError,setSignupError]=useState('')
+    const [createdUserEmail,setCreatedUserEmail]=useState('')
+    const [token]=useToken(createdUserEmail)
     const googleProvider= new GoogleAuthProvider();
     const Navigate=useNavigate() 
     useTitle('signup')
 
+
+    if(token){
+        Navigate('/')
+       }
 
     const handleSignup = data => {
         setSignupError('')
@@ -72,8 +79,8 @@ const SignUp = () => {
             .then(res=>res.json())
             .then(data=>{
                 console.log(data)
-               
-               Navigate('/') 
+                setCreatedUserEmail(email)
+              
             })
         }
 
