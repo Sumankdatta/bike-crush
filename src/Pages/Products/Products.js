@@ -12,7 +12,7 @@ const Products = () => {
             <div className='text-4xl text-bold text-center text-orange-600 mt-10 mb-24'>
                 <h1>Select your best bike</h1>
             </div>
-            <div className='grid grid-cols-3 my-20 cols-auto justify-items-center'>
+            <div className='grid grid-cols-3 my-40 cols-auto justify-items-center'>
                 {
                     items?.map(item => <Product 
                         item={item}
@@ -24,6 +24,7 @@ const Products = () => {
             {productName &&
                 <BookingModal
                 productName={productName}
+                setProductName={setProductName}
                 ></BookingModal>
             }
         </div>

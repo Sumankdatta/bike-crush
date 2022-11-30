@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Product = ({ item,setProductName }) => {
-    const {brand,buying_price,img,sell_price,title,used_time}=item;
+    const {location,seller_name,buying_price,img,sell_price,title,used_time}=item;
     console.log(item)
     return (
        <div>
@@ -10,9 +10,12 @@ const Product = ({ item,setProductName }) => {
             <figure><img className='w-48' src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
-                <p>Used Time : {used_time}</p>
-                <p>Buying Price : {buying_price}</p>
-                <p>Selling Price : {sell_price}</p>
+                <p className='font-bold'>Years Of Use : {used_time}</p>
+                <p className='font-bold'>Original Price : {buying_price}</p>
+                <p className='font-bold'>Resale Price : {sell_price}</p>
+                <p className='font-bold'>Location : {location}</p>
+                <p className='font-bold'>Saller Name : {seller_name}</p>
+
                 
                 <div className="card-actions justify-end">
                     
