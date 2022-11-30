@@ -25,7 +25,7 @@ const Navbar = () => {
         user?.uid ?
 
           <>
-            <li><Link to='/dashboard'>My Products</Link></li>
+            <li><Link to='/dashboard'>Dashboard</Link></li>
             <li><Link><span>{user?.displayName}</span></Link></li>
             <li><button onClick={handalLogout}>Sign Out</button></li>
 
