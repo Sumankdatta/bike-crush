@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import BookingModal from '../BookinModal/BookingModal';
 import Product from '../Product/Product';
 
 const Products = () => {
     const [productName,setProductName]=useState(null)
     const items = useLoaderData()
+    useTitle('products')
     console.log(items)
     return (
         <div>

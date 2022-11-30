@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const MyOrder = () => {
 
     const {user}=useContext(AuthContext);
+    useTitle('my orders')
 
     const url=`http://localhost:5000/bookings?email=${user?.email}`;
 

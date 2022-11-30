@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import login from '../../assets/image/sign.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -12,6 +13,7 @@ const SignUp = () => {
     const [signupError,setSignupError]=useState('')
     const googleProvider= new GoogleAuthProvider();
     const Navigate=useNavigate() 
+    useTitle('signup')
 
 
     const handleSignup = data => {

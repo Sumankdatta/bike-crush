@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import login from '../../assets/image/sign.png'
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -10,6 +11,7 @@ const Login = () => {
     const {signIn,paswordVer,user,loading}=useContext(AuthContext);
     const location=useLocation();
     const Navigate=useNavigate()
+    useTitle('login')
 
     if(loading){
         return <progress className="progress w-56"></progress>

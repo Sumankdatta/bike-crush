@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../assets/image/banner.jpg'
+import useTitle from '../../../../hooks/useTitle';
 
 const Category = () => {
+    useTitle('category')
 
     const [categories, setCategories] = useState([])
     console.log(categories)
