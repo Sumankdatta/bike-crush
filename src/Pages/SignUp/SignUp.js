@@ -38,7 +38,8 @@ const SignUp = () => {
                  .catch(error=>{
                     console.error(error)
                     setSignupError(error.message)
-                })       
+                })  
+                Navigate('/')         
         }
 
         const handleGoogleSignIn = () => {
