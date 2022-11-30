@@ -71,8 +71,7 @@ const Login = () => {
                     <input className='btn btn-accent w-full mt-5' value='Login' type="submit" />
                 </form>
                 <p className='text-center mt-2'>New to Doctors Portal ? <Link to='/signup' className='text-primary'>Create new Account</Link></p>
-                <div className="divider">OR</div>
-                <button className='btn btn-outline w-full mt-5'>CONTINUE WITH GOOGLE</button>
+               
             </div>
   </div>
  
