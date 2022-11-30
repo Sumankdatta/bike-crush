@@ -16,7 +16,7 @@ const BannerItems = ({slide}) => {
          
          
          <div className="absolute flex justify-between transform -translate-y-1/2 left-24 top-1/4">
-           <h1 className='lg:text-5xl text-3xl font-bold text-white banner'>Perfect Way To Buy <br /> and Sell Car On Our <br /> Platform</h1>
+           <h1 className='lg:text-5xl text-3xl font-bold text-white banner'>Perfect Way To Buy <br /> and Sell Bike On Our <br /> Platform</h1>
          </div>
          <div className="absolute flex justify-between transform -translate-y-1/2 left-24 top-1/2">
            <p className='text-xl text-white banneritems'>Want to Sell your bike? List your used bike for sale at BikeCrush <br /> and get Best Price Deals for your bike from 100% Verified and Genuine Buyers.
