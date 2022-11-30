@@ -1,8 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import useTitle from '../../../hooks/useTitle';
 
 const Allusers = () => {
-
+    useTitle('Allsellers')
     const { data: users = [] } = useQuery({
         queryKey: ['users'],
         queryFn: async() =>{ 

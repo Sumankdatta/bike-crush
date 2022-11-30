@@ -1,0 +1,107 @@
+[debug] [2022-11-30T14:24:47.477Z] ----------------------------------------------------------------------
+[debug] [2022-11-30T14:24:47.481Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pintu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-30T14:24:47.482Z] CLI Version:   11.15.0
+[debug] [2022-11-30T14:24:47.482Z] Platform:      win32
+[debug] [2022-11-30T14:24:47.483Z] Node Version:  v16.15.1
+[debug] [2022-11-30T14:24:47.485Z] Time:          Wed Nov 30 2022 20:24:47 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-11-30T14:24:47.485Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-30T14:24:47.679Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-30T14:24:47.680Z] > authorizing via signed-in user (sumankdatta002@gmail.com)
+[debug] [2022-11-30T14:24:47.681Z] [iam] checking project bike-sale-97ac2 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-30T14:24:47.683Z] > refreshing access token with scopes: []
+[debug] [2022-11-30T14:24:47.686Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-30T14:24:47.687Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-30T14:24:48.550Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-11-30T14:24:48.551Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-30T14:24:48.571Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bike-sale-97ac2:testIamPermissions [none]
+[debug] [2022-11-30T14:24:48.571Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/bike-sale-97ac2:testIamPermissions x-goog-quota-user=projects/bike-sale-97ac2
+[debug] [2022-11-30T14:24:48.572Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bike-sale-97ac2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-30T14:24:50.570Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bike-sale-97ac2:testIamPermissions 200
+[debug] [2022-11-30T14:24:50.571Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bike-sale-97ac2:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-30T14:24:50.577Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bike-sale-97ac2 [none]
+[debug] [2022-11-30T14:24:51.433Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bike-sale-97ac2 200
+[debug] [2022-11-30T14:24:51.435Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bike-sale-97ac2 {"projectId":"bike-sale-97ac2","projectNumber":"975123577886","displayName":"bike-sale","name":"projects/bike-sale-97ac2","resources":{"hostingSite":"bike-sale-97ac2"},"state":"ACTIVE","etag":"1_2e4bc26b-0509-4fec-9e41-5b05b46ea700"}
+[info] 
+[info] === Deploying to 'bike-sale-97ac2'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-11-30T14:24:51.472Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions [none]
+[debug] [2022-11-30T14:24:51.473Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-30T14:24:53.596Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions 200
+[debug] [2022-11-30T14:24:53.597Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions {"name":"projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[bike-sale-97ac2]: beginning deploy... 
+[info] i  hosting[bike-sale-97ac2]: found 27 files in build 
+[debug] [2022-11-30T14:24:53.730Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-30T14:24:54.733Z] [hosting] hash cache [YnVpbGQ] stored for 27 files
+[debug] [2022-11-30T14:24:54.734Z] [hosting][hash queue][FINAL] {"max":978,"min":17,"avg":103.11111111111111,"active":0,"complete":27,"success":27,"errored":0,"retried":0,"total":27,"elapsed":998}
+[debug] [2022-11-30T14:24:54.735Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874:populateFiles [none]
+[debug] [2022-11-30T14:24:54.735Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874:populateFiles {"files":{"/favicon.ico":"c2dfbba2c462335983ed66bbfd9f6e6e6b2f6bcf5a6b762dbfd5827af7eed33a","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/popular.json":"a0d137d3e2d8ac539684e4f33d3f4ec7ea63aa9100e6ac09e6ca15ba47c3d789","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"9596ad7677e71474f8fc785af6e96aed841b4c21ff84c4c6e47d2ab9b77d4504","/index.html":"dbe3372fa77ac17e5e1e494449885e4fe96644f215a292371283959ef316d30b","/static/js/787.3c2f054c.chunk.js":"31571f9c32cf210575fa8ca2604858d335d341b5ded90a8563f7780ddfbef7e6","/static/js/787.3c2f054c.chunk.js.map":"df60771998ebea6bf9eb3656c528231783963d32f8182cf0276197ce4bc46049","/static/js/main.4878abe2.js.LICENSE.txt":"f621b4e7f4e61953028a8d52b85cfaaac237bfffcb40034341de36786ecc3b16","/static/css/main.d1c9e1fe.css.map":"bf01369ac16482a741695688bd2027858b88dd2a793f788bc7bd98101397f1f2","/static/media/blog2.9516a00372c8577d4473.png":"2da7eac8384440a87a611d9f4e4e83046a9afa90febc111d6432dee4a719fc5d","/static/css/main.d1c9e1fe.css":"67620f6d816c5cf33676ca442d6390d20600ef26ffc9dc8f911f4c390c5f97c8","/static/media/blog3.edfebe479ffc32cc063c.jpg":"66e30ffc17b8acd44ea7773de1f98d6fa3b546118a7276fa45a0f2e3aef884a4","/static/media/ban1.e7867353c7b0f6107ec6.jpg":"0fd1942c16656c322359340acdd88c2ca41170921dce46c092fe90a984785941","/static/media/blog1.2adb69ba6b2c00017782.jpg":"c372f3f1458000be37208b3c7de676d93092a4566177aa4b887e61ed51d88c81","/static/media/notfound.89768c90de07d1310b96.jpg":"60328280da0fed9ecebcd04e21204b915619f628b85a541edaca2d0fe2e68554","/static/media/blog4.563ae681b5ca8f525577.png":"185e389e27aaa7e04b235ff8aeea4c9f23d0a0ffa5164c22b899e98b40a5840f","/static/media/bikeico.38530e67c186f7d2c788.png":"c2dfbba2c462335983ed66bbfd9f6e6e6b2f6bcf5a6b762dbfd5827af7eed33a","/static/media/banner.80abe9880639e50de094.jpg":"d020a269333289cf26b7489446c6c2491cc88b2737cd2320647d067ec741db2f","/static/media/ban3.e5f9bbe8db9611240b8c.jpg":"da83ea438a1de3af8ebf2f620ca0cb8c2132601e727ed1452e8cac2ca70c9e77","/static/media/ban2.ff7053b3fb1d2e594b60.jpg":"40021ca4ea178acf938ef9cfbfee0a32b16ab08385637fa9037315540bc14147","/static/js/main.4878abe2.js":"31ac592996a7ba62f13776221d384b202f7be841d12d9b5a239632083f1a1311","/static/media/sign.8def85bd3dd26ace1215.png":"4da49023c327cf653a6cdd03b5c7c17d008d38ff3e1c6f3556beb6469820076f","/static/media/vaspa.07884c0293b8998e88b0.jpg":"d9b740f538fe7c0115317693339bd4949bdb1616dd16170dadb06104ffff9e85","/static/js/main.4878abe2.js.map":"0475e4570698307fd5d86edc2ec467c6f072b28452fc7b5f84c6beb01e0b2953"}}
+[debug] [2022-11-30T14:24:56.478Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874:populateFiles 200
+[debug] [2022-11-30T14:24:56.479Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874:populateFiles {"uploadRequiredHashes":["9596ad7677e71474f8fc785af6e96aed841b4c21ff84c4c6e47d2ab9b77d4504","0475e4570698307fd5d86edc2ec467c6f072b28452fc7b5f84c6beb01e0b2953","dbe3372fa77ac17e5e1e494449885e4fe96644f215a292371283959ef316d30b","31ac592996a7ba62f13776221d384b202f7be841d12d9b5a239632083f1a1311"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files"}
+[debug] [2022-11-30T14:24:56.486Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/9596ad7677e71474f8fc785af6e96aed841b4c21ff84c4c6e47d2ab9b77d4504 [none]
+[debug] [2022-11-30T14:24:56.487Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/9596ad7677e71474f8fc785af6e96aed841b4c21ff84c4c6e47d2ab9b77d4504 [stream]
+[debug] [2022-11-30T14:24:56.496Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/0475e4570698307fd5d86edc2ec467c6f072b28452fc7b5f84c6beb01e0b2953 [none]
+[debug] [2022-11-30T14:24:56.497Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/0475e4570698307fd5d86edc2ec467c6f072b28452fc7b5f84c6beb01e0b2953 [stream]
+[debug] [2022-11-30T14:24:56.503Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/dbe3372fa77ac17e5e1e494449885e4fe96644f215a292371283959ef316d30b [none]
+[debug] [2022-11-30T14:24:56.504Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/dbe3372fa77ac17e5e1e494449885e4fe96644f215a292371283959ef316d30b [stream]
+[debug] [2022-11-30T14:24:56.513Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/31ac592996a7ba62f13776221d384b202f7be841d12d9b5a239632083f1a1311 [none]
+[debug] [2022-11-30T14:24:56.514Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/31ac592996a7ba62f13776221d384b202f7be841d12d9b5a239632083f1a1311 [stream]
+[debug] [2022-11-30T14:24:56.523Z] [hosting][populate queue][FINAL] {"max":1755,"min":1755,"avg":1755,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1793}
+[debug] [2022-11-30T14:24:56.525Z] [hosting] uploads queued: 4
+[debug] [2022-11-30T14:24:59.023Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/dbe3372fa77ac17e5e1e494449885e4fe96644f215a292371283959ef316d30b 200
+[debug] [2022-11-30T14:24:59.024Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/dbe3372fa77ac17e5e1e494449885e4fe96644f215a292371283959ef316d30b [stream]
+[debug] [2022-11-30T14:25:00.260Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/9596ad7677e71474f8fc785af6e96aed841b4c21ff84c4c6e47d2ab9b77d4504 200
+[debug] [2022-11-30T14:25:00.261Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/9596ad7677e71474f8fc785af6e96aed841b4c21ff84c4c6e47d2ab9b77d4504 [stream]
+[debug] [2022-11-30T14:25:00.711Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/31ac592996a7ba62f13776221d384b202f7be841d12d9b5a239632083f1a1311 200
+[debug] [2022-11-30T14:25:00.712Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/31ac592996a7ba62f13776221d384b202f7be841d12d9b5a239632083f1a1311 [stream]
+[debug] [2022-11-30T14:25:01.782Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/0475e4570698307fd5d86edc2ec467c6f072b28452fc7b5f84c6beb01e0b2953 200
+[debug] [2022-11-30T14:25:01.783Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/bike-sale-97ac2/versions/746ef3061087b874/files/0475e4570698307fd5d86edc2ec467c6f072b28452fc7b5f84c6beb01e0b2953 [stream]
+[debug] [2022-11-30T14:25:01.784Z] [hosting][upload queue][FINAL] {"max":5301,"min":2541,"avg":3962.5,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":5303}
+[info] +  hosting[bike-sale-97ac2]: file upload complete 
+[debug] [2022-11-30T14:25:01.791Z] [hosting] deploy completed after 8175ms
+[debug] [2022-11-30T14:25:01.812Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "bike-sale-97ac2"
+    },
+    "version": "projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874"
+  }
+]
+[info] i  hosting[bike-sale-97ac2]: finalizing version... 
+[debug] [2022-11-30T14:25:01.829Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions/746ef3061087b874 updateMask=status%2Cconfig
+[debug] [2022-11-30T14:25:01.830Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions/746ef3061087b874 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-11-30T14:25:08.057Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions/746ef3061087b874 200
+[debug] [2022-11-30T14:25:08.059Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/versions/746ef3061087b874 {"name":"projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-30T14:24:52.903312Z","createUser":{"email":"sumankdatta002@gmail.com"},"finalizeTime":"2022-11-30T14:25:04.761146Z","finalizeUser":{"email":"sumankdatta002@gmail.com"}}
+[debug] [2022-11-30T14:25:08.060Z] [hosting] finalized version for bike-sale-97ac2:[object Object]
+[info] +  hosting[bike-sale-97ac2]: version finalized 
+[info] i  hosting[bike-sale-97ac2]: releasing new version... 
+[debug] [2022-11-30T14:25:08.071Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/channels/live/releases versionName=projects%2F975123577886%2Fsites%2Fbike-sale-97ac2%2Fversions%2F746ef3061087b874
+[debug] [2022-11-30T14:25:08.072Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/channels/live/releases {}
+[debug] [2022-11-30T14:25:20.196Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/channels/live/releases 200
+[debug] [2022-11-30T14:25:20.199Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/bike-sale-97ac2/channels/live/releases {"name":"projects/975123577886/sites/bike-sale-97ac2/channels/live/releases/1669818314184421","version":{"name":"projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-30T14:24:52.903312Z","createUser":{"email":"sumankdatta002@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu1_qfEYJaqwr850Aw0wc3-nesge8xDwKCd93E65"},"finalizeTime":"2022-11-30T14:25:04.761146Z","finalizeUser":{"email":"sumankdatta002@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu1_qfEYJaqwr850Aw0wc3-nesge8xDwKCd93E65"}},"type":"DEPLOY","releaseTime":"2022-11-30T14:25:14.184421888Z","releaseUser":{"email":"sumankdatta002@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu1_qfEYJaqwr850Aw0wc3-nesge8xDwKCd93E65"}}
+[debug] [2022-11-30T14:25:20.200Z] [hosting] release: {"name":"projects/975123577886/sites/bike-sale-97ac2/channels/live/releases/1669818314184421","version":{"name":"projects/975123577886/sites/bike-sale-97ac2/versions/746ef3061087b874","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-30T14:24:52.903312Z","createUser":{"email":"sumankdatta002@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu1_qfEYJaqwr850Aw0wc3-nesge8xDwKCd93E65"},"finalizeTime":"2022-11-30T14:25:04.761146Z","finalizeUser":{"email":"sumankdatta002@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu1_qfEYJaqwr850Aw0wc3-nesge8xDwKCd93E65"}},"type":"DEPLOY","releaseTime":"2022-11-30T14:25:14.184421888Z","releaseUser":{"email":"sumankdatta002@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu1_qfEYJaqwr850Aw0wc3-nesge8xDwKCd93E65"}}
+[info] +  hosting[bike-sale-97ac2]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/bike-sale-97ac2/overview
+[info] Hosting URL: https://bike-sale-97ac2.web.app
+[debug] [2022-11-30T14:25:41.205Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Pintu\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
