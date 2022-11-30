@@ -10,15 +10,16 @@ const Category = () => {
     console.log(categories)
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://bike-sale-server.vercel.app/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])
 
     return (
         <div>
-            <div className='text-4xl text-bold text-center mt-20 '>
-                <h1>Select Your Best Second-Hand <br /> Bike By Category</h1>
+            <div >
+                <h1 className='text-4xl text-bold text-center mt-20'>Select Your Best Second-Hand <br /> Bike By Category</h1>
+                <p className='text-xl text-bold mt-5 text-orange-600 text-center'>Click Your favorite brand and choose your dream bike</p>
             </div>
             <div className='grid grid-cols-3 cols-auto justify-items-center text-4xl mt-32 text-bold'>
             {
